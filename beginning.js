@@ -77,11 +77,38 @@ function firstFunction(x, y) {
 }
 
 function secondFunction() {
+  return
+
+}
+
+
+function thirdFunction() {
 
 }
 
 
 //Object ********************************
+var myobj = {
+  name: "Chris",
+  age: 23,
+  getage: function firstName(){
+    return this.name;
+  }
+  getname: function age(){
+    return this.age;
+  }
+}
+
+obj
+
+
+
+
+
+
+
+
+
 //This is creating all of the information for mySchool object and at the bottom I am pulling information from mySchool object.
 var mySchool = new Object();
 mySchool.college = "College of Charleston";
