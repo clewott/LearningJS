@@ -112,6 +112,17 @@ Result: 20
 
 //Object ********************************
 
+//To see what type of candy is available
+var availableCandy = {
+  bar:'Snickers',
+  sweet: 'Skittles',
+  chocolate: 'Reeses',
+  gummy: 'gushers',
+}
+
+//Checks what kind of gummy candy is available
+availableCandy.gummy
+
 //This is scanning the saved information and returning the name
 var myobj = new Object {
   name:'Chris',
@@ -126,13 +137,11 @@ myobj.getName();
 Result: "Chris"
 //To change a data field just do (object).(property name) = (new property value)
 
-
 /* This is providing the information of how many rooms our home has and how many our being used. */
 var home = {
   name:'Casa',
   rooms: 3,
   booked: 1,
-  roomTypes: ['double', 'queen', 'suite'],
 
   checkAvailability: function() {
     return this.rooms - this.booked;
@@ -143,22 +152,6 @@ home.checkAvailability();
 
 Result: 2
 
-/* This is looking at the first and last name length and determining if it is longer then 20 characters */
-var fire = {
-  firstName:'Christopher',
-  lastName:'Otten',
-
-  funnyResponse: function()
-    if (firstName.length + lastName.length > 20) {
-      console.log("Your name is longer than 20 characters");
-    }
-    else {
-      console.log("Your name is less than 20 characters long.");
-    }
-}
-
-Result: Your name is less than 20 characters long.
-
 function candy (chocolate, available, sold) {
   this.chocolate = chocolate;
   this.available = available;
@@ -167,3 +160,8 @@ function candy (chocolate, available, sold) {
     return this.available - this.sold;
   };
 }
+
+var bar = new candy;
+  bar.chocolate = 'Snickers';
+  bar.available = 20;
+  bar.sold = 10;
