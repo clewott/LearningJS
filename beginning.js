@@ -113,7 +113,7 @@ Result: 20
 //Object ********************************
 
 //This is scanning the saved information and returning the name
-var myobj = {
+var myobj = new Object {
   name:'Chris',
   age: 23,
   getName: function() {
@@ -124,6 +124,8 @@ var myobj = {
 myobj.getName();
 
 Result: "Chris"
+//To change a data field just do (object).(property name) = (new property value)
+
 
 /* This is providing the information of how many rooms our home has and how many our being used. */
 var home = {
@@ -141,9 +143,27 @@ home.checkAvailability();
 
 Result: 2
 
-//This is creating all of the information for mySchool object and at the bottom I am pulling information from mySchool object.
-var mySchool = {
-  college: 'College of Charleston',
-  degree: 'Business Administration',
-  year: 2013,
+/* This is looking at the first and last name length and determining if it is longer then 20 characters */
+var fire = {
+  firstName:'Christopher',
+  lastName:'Otten',
+
+  funnyResponse: function()
+    if (firstName.length + lastName.length > 20) {
+      console.log("Your name is longer than 20 characters");
+    }
+    else {
+      console.log("Your name is less than 20 characters long.");
+    }
+}
+
+Result: Your name is less than 20 characters long.
+
+function candy (chocolate, available, sold) {
+  this.chocolate = chocolate;
+  this.available = available;
+  this.sold = sold;
+  this.checkCandy = function() {
+    return this.available - this.sold;
+  };
 }
